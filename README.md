@@ -1,4 +1,3 @@
-````markdown name=README.md
 <p align="center">
   <img src="https://raw.githubusercontent.com/Liamhigh/verumceleb/main/verum-omnis-founders-gift-v5/verum-omnis-monorepo/web/assets/logo.png" width="220" alt="Verum Omnis Logo"/>
 </p>
@@ -75,4 +74,3 @@ Referenced in sealed case records and accepted in institutional action:
 
 📩 Contact: **liam@verumglobal.foundation**  
 🔗 [Certified Institutional Pack & Case Files](https://linkly.link/2GgNf)
-````# Liam-Highcock-
