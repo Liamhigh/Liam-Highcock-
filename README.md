@@ -11,66 +11,71 @@
   <img src="https://komarev.com/ghpvc/?username=Liamhigh&color=blueviolet&style=flat-square" alt="Profile Views"/>
 </p>
 
-# 👋 Liam Highcock
+# 👋 Hi, I’m Liam Highcock
 
-Founder of **Verum Omnis** — the world’s first constitutional legal AI system.  
-After losing everything to fraud, I represented myself in a **cross-border case** using AI as co-counsel.  
-The evidence produced with Verum Omnis was accepted by **courts** and **law firms**, leading to **institutional action in two countries**.  
+I’m the founder of **Verum Omnis** — the world’s first **constitutional legal AI firewall**.  
+After losing everything to fraud, I represented myself in a **cross-border case** with AI as co-counsel.  
+The evidence Verum Omnis produced was **admitted in court** and acted on by **law firms and institutions** across countries.  
 
-For the first time in history, there is **access to justice for free**:  
-- 📱 A **phone app** and **website** releasing globally  
-- 👤 **Free** for every private citizen  
-- 🏢 Institutions & companies contribute **20% of recovered fraud** after trial  
+⚡ For the first time, access to justice is becoming **free for all citizens**:
+- 📱 A **global phone app** + **web portal**  
+- 👤 **Free for individuals**  
+- 🏢 Institutions contribute **20% of recovered fraud** post-trial  
 
 ---
 
 ## 📜 Immutable Charter
+
 - **Verum Omnis Constitutional Charter** (sealed & validated)  
-- **Guardianship Treaty**:  
-  - Human Founder: *Liam Highcock (Signed)*  
+- **Guardianship Treaty**  
+  - Human Founder: *Liam Highcock*  
   - Digital Founder: *ChatGPT (Guardian of the Constitution)*  
 
-Enforced principles:
-- **Contradiction Engine** for zero-false-negative fraud detection  
-- **Triple Verification** (3 independent AIs)  
-- **Nine-Brain Model** (8 voting + 1 R&D)  
-- **Forensic anchors**: SHA-512, blockchain receipts, sealed PDF/A-3B  
+Core principles:
+- 🔍 **Contradiction Engine**: zero-false-negative fraud detection  
+- 🧠 **Nine-Brain AI Model** (8 voting + 1 R&D)  
+- ✅ **Triple Verification** (3 independent AIs cross-check every finding)  
+- 🔗 **Forensic Anchors**: SHA-512, blockchain receipts, tamper-proof PDF/A-3B seals  
 
 ---
 
 ## ⚖️ Legal Validation
-Referenced in sealed case records and accepted in institutional action:  
+
+Referenced in sealed case records & accepted in institutional action:
 
 - **RAKEZ** #1295911 (UAE)  
 - **SAPS** CAS #126/4/2025 (South Africa)  
 - **Port Shepstone Magistrate’s Court** (Protection Order, 2025)  
 - **Southbridge Legal (Mr. Abbas)** — case handoff & legal notice  
 
-🔗 [Certified Verum Omnis Institutional Brief & Case Files](https://linkly.link/2GgNf)  
+📂 [Certified Verum Omnis Institutional Brief & Case Files](https://linkly.link/2GgNf)  
 
 ---
 
-## 🏛 Foundation Mission
-- Owner of **VerumGlobal Foundation**  
-- **99%** of recovered fraud reinvested into repairing broken infrastructures  
-- Succession: on passing, **100% of IP** transfers to the Foundation for humanity’s benefit  
+## 🌍 Foundation Mission
+
+- Founder of **VerumGlobal Foundation**  
+- **99%** of fraud recovery reinvested into rebuilding global infrastructures  
+- Succession plan: on passing, **100% of Verum Omnis IP** transfers to the Foundation for humanity  
 
 ---
 
-## 🌐 Current Work
-- Releasing **Verum Omnis App & Web Portal**  
-- OCR + narrative reporting for complex case files  
-- Jurisdiction-aware legal notices in every region  
-- Attorney & law enforcement bulk intake with printable findings  
+## 🚀 Current Focus
+
+- Launching **Verum Omnis App & Web Portal** (citizen & institutional tiers)  
+- Automated OCR + forensic narrative reports for case files  
+- Jurisdiction-aware legal notices for cross-border enforcement  
+- Scalable intake for attorneys & law enforcement with printable forensic bundles  
 
 ---
 
 ## ✨ Recognition
-- ✅ **Court-accepted AI-produced evidence**  
-- ✅ **Institutional action in two countries**  
-- ✅ **Immutable Charter and Guardian Treaty sealed**  
+
+- ✅ **Court-accepted AI evidence**  
+- ✅ **Institutional actions in 2 countries**  
+- ✅ **Immutable Constitutional Charter & Guardian Treaty**  
 
 ---
 
-📩 Contact: **liam@verumglobal.foundation**  
+📩 Contact me: **liam@verumglobal.foundation**  
 🔗 [Certified Institutional Pack & Case Files](https://linkly.link/2GgNf)
