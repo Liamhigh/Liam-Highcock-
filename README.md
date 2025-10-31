@@ -79,3 +79,10 @@ Referenced in sealed case records & accepted in institutional action:
 
 📩 Contact me: **liam@verumglobal.foundation**  
 🔗 [Certified Institutional Pack & Case Files](https://linkly.link/2GgNf)
+---
+
+## 🔴 Live Links
+
+- **Website (Firebase Hosting):** https://verumglobal.foundation  
+- **Chat Interface:** https://verumglobal.foundation/chat.html  
+- **Institutions Page:** https://verumglobal.foundation/institutions.html
