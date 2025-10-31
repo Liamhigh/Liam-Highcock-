@@ -1,0 +1,9 @@
+node_modules/
+.firebase/
+.firebaserc
+.env
+*.log
+*.tgz
+*.tar.gz
+*.zip
+.DS_Store
