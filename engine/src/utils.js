@@ -32,6 +32,8 @@ export function generateTimestamp() {
 
 /**
  * Deep clone an object
+ * Note: Uses JSON serialization. Does not handle functions, undefined, symbols, 
+ * dates (converted to strings), or circular references.
  * @param {object} obj - Object to clone
  * @returns {object} Cloned object
  */
@@ -78,13 +80,19 @@ export function validateConfig(config) {
 
 /**
  * Calculate Levenshtein distance between two strings
- * @param {string} str1 - First string
- * @param {string} str2 - Second string
+ * Note: O(n*m) complexity. For large texts, consider chunking.
+ * @param {string} str1 - First string (max 10000 chars)
+ * @param {string} str2 - Second string (max 10000 chars)
  * @returns {number} Edit distance
  */
 export function levenshteinDistance(str1, str2) {
-  const m = str1.length;
-  const n = str2.length;
+  // Limit input size to prevent memory issues
+  const maxLength = 10000;
+  const s1 = str1.length > maxLength ? str1.substring(0, maxLength) : str1;
+  const s2 = str2.length > maxLength ? str2.substring(0, maxLength) : str2;
+  
+  const m = s1.length;
+  const n = s2.length;
   
   if (m === 0) return n;
   if (n === 0) return m;
@@ -96,7 +104,7 @@ export function levenshteinDistance(str1, str2) {
   
   for (let i = 1; i <= m; i++) {
     for (let j = 1; j <= n; j++) {
-      const cost = str1[i - 1] === str2[j - 1] ? 0 : 1;
+      const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
       dp[i][j] = Math.min(
         dp[i - 1][j] + 1,
         dp[i][j - 1] + 1,

@@ -247,16 +247,18 @@ export class ContradictionDetector {
    * Check for logical contradiction between two sentences
    */
   checkLogicalContradiction(sentence1, sentence2) {
-    const negationPattern = /\b(never|not|no|none|didn't|doesn't|wasn't|weren't|haven't|hasn't|cannot|can't|won't|wouldn't)\b/gi;
+    // Create new regex instances to avoid state issues
+    const negationPattern1 = /\b(never|not|no|none|didn't|doesn't|wasn't|weren't|haven't|hasn't|cannot|can't|won't|wouldn't)\b/gi;
+    const negationPattern2 = /\b(never|not|no|none|didn't|doesn't|wasn't|weren't|haven't|hasn't|cannot|can't|won't|wouldn't)\b/gi;
+    const negationPatternReplace = /\b(never|not|no|none|didn't|doesn't|wasn't|weren't|haven't|hasn't|cannot|can't|won't|wouldn't)\b/gi;
     
-    const hasNegation1 = negationPattern.test(sentence1.text);
-    negationPattern.lastIndex = 0; // Reset regex
-    const hasNegation2 = negationPattern.test(sentence2.text);
+    const hasNegation1 = negationPattern1.test(sentence1.text);
+    const hasNegation2 = negationPattern2.test(sentence2.text);
 
-    // Calculate semantic similarity
+    // Calculate semantic similarity using fresh regex for replacement
     const similarity = this.calculateTextSimilarity(
-      sentence1.text.replace(negationPattern, ''),
-      sentence2.text.replace(negationPattern, '')
+      sentence1.text.replace(negationPatternReplace, ''),
+      sentence2.text.replace(/\b(never|not|no|none|didn't|doesn't|wasn't|weren't|haven't|hasn't|cannot|can't|won't|wouldn't)\b/gi, '')
     );
 
     if (similarity > 0.6 && hasNegation1 !== hasNegation2) {

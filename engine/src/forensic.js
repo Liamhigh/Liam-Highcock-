@@ -69,10 +69,11 @@ export class ForensicProcessor {
    * Create audit trail for the analysis
    */
   createAuditTrail(data) {
+    const baseTime = Date.now();
     const events = [
       {
         event: 'ANALYSIS_INITIATED',
-        timestamp: generateTimestamp(),
+        timestamp: new Date(baseTime).toISOString(),
         details: {
           documentSize: data.text.length,
           findingsCount: data.findings.length
@@ -80,11 +81,11 @@ export class ForensicProcessor {
       }
     ];
 
-    // Add finding events
+    // Add finding events with incrementing timestamps for uniqueness
     for (let i = 0; i < data.findings.length; i++) {
       events.push({
         event: 'CONTRADICTION_DETECTED',
-        timestamp: generateTimestamp(),
+        timestamp: new Date(baseTime + i + 1).toISOString(),
         details: {
           findingIndex: i,
           type: data.findings[i].type,
@@ -95,7 +96,7 @@ export class ForensicProcessor {
 
     events.push({
       event: 'ANALYSIS_COMPLETED',
-      timestamp: generateTimestamp(),
+      timestamp: new Date(baseTime + data.findings.length + 1).toISOString(),
       details: {
         totalFindings: data.findings.length,
         documentHash: data.hash
