@@ -86,3 +86,23 @@ Referenced in sealed case records & accepted in institutional action:
 - **Website (Firebase Hosting):** https://verumglobal.foundation  
 - **Chat Interface:** https://verumglobal.foundation/chat.html  
 - **Institutions Page:** https://verumglobal.foundation/institutions.html
+
+---
+
+## 🔧 Contradiction Engine
+
+This repository includes the **Contradiction Engine** — the core analysis module for zero-false-negative fraud detection.
+
+📂 **[View Engine Documentation](./engine/README.md)**
+
+Features:
+- 🔍 Temporal, numerical, logical, and certainty contradiction detection
+- ✅ Triple verification (3 independent AI checks)
+- 🔗 SHA-512 forensic anchoring
+- 📊 Multi-format reports (JSON, Text, Markdown, HTML)
+
+```bash
+# Quick start
+cd engine
+npm test
+```
