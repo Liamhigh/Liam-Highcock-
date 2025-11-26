@@ -84,10 +84,16 @@ Referenced in sealed case records & accepted in institutional action:
 
 ## 📋 Documentation
 
-- **[Production Readiness Assessment](PRODUCTION-READINESS.md)** - Comprehensive readiness evaluation
-- **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Firebase, web servers, and Android
-- **[Android Build Guide](README-ANDROID.md)** - Build Android APK
-- **[Security Policy](SECURITY.md)** - Report vulnerabilities and security guidelines
+### Production & Deployment
+- 📊 **[Production Readiness Summary](PRODUCTION-READINESS-SUMMARY.md)** - Executive summary and verdict
+- 📋 **[Production Readiness Assessment](PRODUCTION-READINESS.md)** - Comprehensive evaluation (65/100)
+- 🚀 **[Quick Start Guide](QUICK-START-GUIDE.md)** - 7-hour path to basic production readiness
+- 🌐 **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Firebase, web servers, and Android
+
+### Technical
+- 📱 **[Android Build Guide](README-ANDROID.md)** - Build Android APK
+- ⚡ **[Performance Optimization](PERFORMANCE-OPTIMIZATION.md)** - Optimize images, fonts, and bundle size
+- 🔒 **[Security Policy](SECURITY.md)** - Report vulnerabilities and security guidelines
 
 ---
 
