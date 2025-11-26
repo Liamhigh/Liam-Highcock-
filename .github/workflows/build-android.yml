@@ -1,0 +1,104 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, copilot/build-android-project-apk ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Prepare web assets
+        run: |
+          mkdir -p www
+          cp index.html www/
+          cp -r assets www/
+          cp favicon.png www/
+      
+      - name: Add Android platform
+        run: npx cap add android || npx cap sync android
+      
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+      
+      - name: Build Debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+      
+      - name: Build Release APK (if signed)
+        working-directory: android
+        run: ./gradlew assembleRelease --no-daemon --stacktrace || echo "Skipping release build (no keystore configured)"
+        continue-on-error: true
+      
+      - name: List APK outputs
+        run: |
+          echo "=== Debug APK ==="
+          ls -lh android/app/build/outputs/apk/debug/ || echo "No debug APK found"
+          echo ""
+          echo "=== Release APK ==="
+          ls -lh android/app/build/outputs/apk/release/ || echo "No release APK found"
+      
+      - name: Copy APKs to root
+        run: |
+          mkdir -p apk-outputs
+          if [ -f android/app/build/outputs/apk/debug/app-debug.apk ]; then
+            cp android/app/build/outputs/apk/debug/app-debug.apk apk-outputs/verum-omnis-debug.apk
+          fi
+          if [ -f android/app/build/outputs/apk/release/app-release.apk ]; then
+            cp android/app/build/outputs/apk/release/app-release.apk apk-outputs/verum-omnis-release.apk
+          fi
+          ls -lh apk-outputs/
+      
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: verum-omnis-debug-apk
+          path: apk-outputs/verum-omnis-debug.apk
+          if-no-files-found: error
+      
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: verum-omnis-release-apk
+          path: apk-outputs/verum-omnis-release.apk
+          if-no-files-found: ignore
+      
+      - name: APK Info
+        run: |
+          echo "✅ Android APK build complete!"
+          echo ""
+          if [ -f apk-outputs/verum-omnis-debug.apk ]; then
+            DEBUG_SIZE=$(du -h apk-outputs/verum-omnis-debug.apk | cut -f1)
+            echo "Debug APK size: $DEBUG_SIZE"
+          fi
+          if [ -f apk-outputs/verum-omnis-release.apk ]; then
+            RELEASE_SIZE=$(du -h apk-outputs/verum-omnis-release.apk | cut -f1)
+            echo "Release APK size: $RELEASE_SIZE"
+          fi
+          echo ""
+          echo "Download the APK from the Actions artifacts above."

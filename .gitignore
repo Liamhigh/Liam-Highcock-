@@ -10,3 +10,6 @@ node_modules/
 www/
 android/
 ios/
+*.apk
+*.aab
+apk-outputs/
