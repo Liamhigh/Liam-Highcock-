@@ -7,3 +7,9 @@ node_modules/
 *.tar.gz
 *.zip
 .DS_Store
+www/
+android/
+ios/
+*.apk
+*.aab
+apk-outputs/
