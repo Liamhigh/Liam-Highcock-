@@ -69,6 +69,30 @@ Referenced in sealed case records & accepted in institutional action:
 
 ---
 
+## 📱 Android Forensic Engine (NEW!)
+
+**Verum Omnis V5.2.6** - Nine-Brain Offline Forensic Analysis Engine
+
+🎯 **Get Your APK in 15 Minutes:**
+- 📂 See: [`android-forensic-engine/`](./android-forensic-engine/) directory
+- 🚀 Quick Start: [`QUICK_START.md`](./android-forensic-engine/QUICK_START.md)
+- 📖 Full Documentation: [`README.md`](./android-forensic-engine/README.md)
+
+**Key Features:**
+- ✅ **Nine-Brain Architecture** - Complete forensic analysis system
+- ✅ **100% Offline** - No internet required, complete privacy
+- ✅ **Cryptographic Sealing** - SHA-512 + GPS + timestamp
+- ✅ **Constitutional Compliance** - Zero-Loss Evidence Doctrine
+- ✅ **Professional PDF Reports** - Court-admissible documentation
+- ✅ **Multi-Format Support** - Documents, images, audio, video
+
+**Use the AI Studio Prompt:**
+The complete prompt in [`AI_STUDIO_PROMPT.md`](./android-forensic-engine/AI_STUDIO_PROMPT.md) can generate the full Android APK using Google AI Studio (free) in ~15 minutes.
+
+**"Nine Brains. One Truth."** ⚖️🔒
+
+---
+
 ## ✨ Recognition
 
 - ✅ **Court-accepted AI evidence**  
