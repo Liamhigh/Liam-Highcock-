@@ -1,0 +1,21 @@
+{
+  "name": "verum-omnis-app",
+  "version": "1.0.0",
+  "description": "Verum Omnis - The World's First Legal AI",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "legal",
+    "ai",
+    "verum-omnis"
+  ],
+  "author": "Liam Highcock",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/cli": "^7.4.4",
+    "@capacitor/core": "^7.4.4"
+  }
+}
