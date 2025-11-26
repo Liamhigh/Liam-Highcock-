@@ -46,7 +46,7 @@ export function initSentry() {
       release: import.meta.env.VITE_APP_VERSION || '1.0.0',
       
       // Performance monitoring
-      tracesSampleRate: 1.0, // Capture 100% of transactions in production
+      tracesSampleRate: 0.1, // Capture 10% of transactions to balance performance and cost
       
       // Session replay for debugging
       replaysSessionSampleRate: 0.1, // 10% of sessions

@@ -20,14 +20,19 @@ describe('Verum Omnis - Core Functionality', () => {
   });
 
   it('should have proper asset paths', () => {
-    // Verify expected asset structure
-    const expectedAssets = [
+    // Verify expected asset structure (patterns, not exact filenames with hashes)
+    const assetPatterns = [
+      /^\/assets\/index-[a-zA-Z0-9_-]+\.js$/,
+      /^\/assets\/index-[a-zA-Z0-9_-]+\.css$/,
+    ];
+    
+    const testAssets = [
       '/assets/index-BbQdUqyF.js',
       '/assets/index-C3ktOol-.css',
     ];
     
-    expectedAssets.forEach(asset => {
-      expect(asset).toMatch(/^\/assets\/.+\.(js|css)$/);
+    testAssets.forEach((asset, index) => {
+      expect(asset).toMatch(assetPatterns[index]);
     });
   });
 });
