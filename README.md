@@ -79,6 +79,16 @@ Referenced in sealed case records & accepted in institutional action:
 
 📩 Contact me: **liam@verumglobal.foundation**  
 🔗 [Certified Institutional Pack & Case Files](https://linkly.link/2GgNf)
+
+---
+
+## 📋 Documentation
+
+- **[Production Readiness Assessment](PRODUCTION-READINESS.md)** - Comprehensive readiness evaluation
+- **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Firebase, web servers, and Android
+- **[Android Build Guide](README-ANDROID.md)** - Build Android APK
+- **[Security Policy](SECURITY.md)** - Report vulnerabilities and security guidelines
+
 ---
 
 ## 🔴 Live Links
