@@ -1,8 +1,17 @@
 {
   "name": "verum-omnis-app",
   "version": "1.0.0",
-  "description": "Verum Omnis - The World's First Legal AI",
+  "description": "Verum Omnis - The World's First Constitutional Legal AI Firewall. Free access to justice for all citizens.",
   "main": "index.html",
+  "homepage": "https://verumglobal.foundation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Liamhigh/Liam-Highcock-"
+  },
+  "bugs": {
+    "url": "https://github.com/Liamhigh/Liam-Highcock-/issues",
+    "email": "liam@verumglobal.foundation"
+  },
   "scripts": {
     "android:prepare": "mkdir -p www && cp index.html www/ && cp -r assets www/ && cp favicon.png www/",
     "android:add": "npm run android:prepare && npx cap add android",
@@ -11,18 +20,47 @@
     "android:build:release": "npm run android:sync && cd android && ./gradlew assembleRelease",
     "android:open": "npx cap open android",
     "android:run": "npx cap run android",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "audit:security": "npm audit",
+    "audit:fix": "npm audit fix",
+    "deploy:firebase": "firebase deploy --only hosting",
+    "deploy:preview": "firebase hosting:channel:deploy preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [
     "legal",
     "ai",
-    "verum-omnis"
+    "verum-omnis",
+    "justice",
+    "law",
+    "constitutional",
+    "fraud-detection",
+    "legal-tech"
   ],
-  "author": "Liam Highcock",
+  "author": {
+    "name": "Liam Highcock",
+    "email": "liam@verumglobal.foundation",
+    "url": "https://verumglobal.foundation"
+  },
   "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "dependencies": {
     "@capacitor/android": "^7.4.4",
     "@capacitor/cli": "^7.4.4",
-    "@capacitor/core": "^7.4.4"
+    "@capacitor/core": "^7.4.4",
+    "@sentry/browser": "^10.27.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "happy-dom": "^20.0.10",
+    "jsdom": "^27.2.0",
+    "vitest": "^4.0.14"
   }
 }

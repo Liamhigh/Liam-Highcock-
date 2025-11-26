@@ -13,3 +13,5 @@ ios/
 *.apk
 *.aab
 apk-outputs/
+coverage/
+.vitest/
