@@ -2,7 +2,7 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ main, copilot/build-android-project-apk ]
+    branches: [ main, copilot/build-android-project-apk, copilot/check-project-completion-status ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -42,6 +42,8 @@ jobs:
           cp index.html www/
           cp -r assets www/
           cp favicon.png www/
+          echo "✓ Web assets prepared"
+          ls -la www/
       
       - name: Add Android platform
         run: npx cap add android || npx cap sync android
