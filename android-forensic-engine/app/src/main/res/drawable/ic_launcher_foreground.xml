@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#7C4DFF"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+    
+    <!-- V letter for Verum -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,35 L54,70 L66,35 L60,35 L54,55 L48,35 Z"/>
+    
+    <!-- Nine dots representing the nine brains -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,40m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M78,40m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,68m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M78,68m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    
+</vector>

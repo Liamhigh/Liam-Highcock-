@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp">
+
+    <View
+        android:id="@+id/severityIndicator"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/severity_info" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/severityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.VerumOmnis.Caption"
+                android:textColor="@color/severity_info"
+                android:textStyle="bold"
+                tools:text="INFO" />
+
+            <TextView
+                android:id="@+id/categoryText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:textAppearance="@style/TextAppearance.VerumOmnis.Caption"
+                tools:text="Document Authenticity" />
+
+            <TextView
+                android:id="@+id/confidenceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.VerumOmnis.Caption"
+                tools:text="95%" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.VerumOmnis.Body"
+            tools:text="Document integrity verified with SHA-256 hash" />
+
+        <TextView
+            android:id="@+id/sourceBrainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.VerumOmnis.Caption"
+            android:textColor="@color/text_hint"
+            tools:text="Source: Document Authenticity Brain" />
+
+    </LinearLayout>
+
+</LinearLayout>
