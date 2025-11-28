@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Verum Omnis</string>
+    <string name="forensic_analysis">Forensic Analysis</string>
+    <string name="forensic_report">Forensic Report</string>
+    
+    <!-- Main Activity -->
+    <string name="add_evidence">Add Evidence</string>
+    <string name="start_analysis">Start Analysis</string>
+    <string name="no_evidence">No Evidence Added</string>
+    <string name="add_evidence_hint">Tap + to add documents, images, audio, or video for forensic analysis</string>
+    
+    <!-- Analysis Activity -->
+    <string name="processing">Processing...</string>
+    <string name="analysis_complete">Analysis Complete</string>
+    <string name="view_report">View Report</string>
+    
+    <!-- Report Activity -->
+    <string name="export_pdf">Export PDF</string>
+    <string name="share_report">Share Report</string>
+    <string name="verification_qr">Verification QR Code</string>
+    
+    <!-- Brains -->
+    <string name="brain_1">Contradiction Brain</string>
+    <string name="brain_2">Behavioral Diagnostics Brain</string>
+    <string name="brain_3">Document Authenticity Brain</string>
+    <string name="brain_4">Timeline &amp; Geolocation Brain</string>
+    <string name="brain_5">Voice Forensics Brain</string>
+    <string name="brain_6">Image Validation Brain</string>
+    <string name="brain_7">Legal &amp; Compliance Brain</string>
+    <string name="brain_8">Predictive Analytics Brain</string>
+    <string name="brain_9">Synthesis &amp; Verdict Brain</string>
+    
+    <!-- Constitutional -->
+    <string name="constitutional_compliant">Constitutional Compliant</string>
+    <string name="zero_loss_doctrine">Zero-Loss Evidence Doctrine</string>
+    <string name="triple_ai_consensus">Triple-AI Consensus</string>
+    <string name="guardianship_model">Guardianship Model</string>
+    
+    <!-- Mottos -->
+    <string name="motto_primary">Truth emerges when evidence survives every scrutiny.</string>
+    <string name="motto_seal">Nothing enters and nothing leaves unless sealed.</string>
+    <string name="motto_brains">Nine Brains. One Truth.</string>
+</resources>
