@@ -224,11 +224,14 @@ class TimelineGeolocationBrainImpl : TimelineGeolocationBrain {
     private fun calculateHaversineDistance(lat1: Double, lon1: Double, lat2: Double, lon2: Double): Double {
         val earthRadius = 6371.0 // km
         
-        val dLat = Math.toRadians(lat2 - lat1)
-        val dLon = Math.toRadians(lon2 - lon1)
+        val dLat = kotlin.math.PI / 180 * (lat2 - lat1)
+        val dLon = kotlin.math.PI / 180 * (lon2 - lon1)
+        
+        val lat1Rad = kotlin.math.PI / 180 * lat1
+        val lat2Rad = kotlin.math.PI / 180 * lat2
         
         val a = sin(dLat / 2).pow(2) + 
-                cos(Math.toRadians(lat1)) * cos(Math.toRadians(lat2)) * 
+                cos(lat1Rad) * cos(lat2Rad) * 
                 sin(dLon / 2).pow(2)
         
         val c = 2 * atan2(sqrt(a), sqrt(1 - a))

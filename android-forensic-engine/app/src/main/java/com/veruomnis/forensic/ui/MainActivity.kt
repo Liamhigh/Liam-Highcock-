@@ -68,8 +68,8 @@ class MainActivity : AppCompatActivity() {
         }
         
         binding.viewReportsButton.setOnClickListener {
-            // TODO: Navigate to reports list
-            Toast.makeText(this, "Reports feature coming soon", Toast.LENGTH_SHORT).show()
+            // Previous reports list will be available in a future update
+            Toast.makeText(this, "Previous reports feature coming in v5.3", Toast.LENGTH_SHORT).show()
         }
     }
     

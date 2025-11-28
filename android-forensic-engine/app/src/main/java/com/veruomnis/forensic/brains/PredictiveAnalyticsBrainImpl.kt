@@ -130,7 +130,7 @@ class PredictiveAnalyticsBrainImpl : PredictiveAnalyticsBrain {
             factors++
         }
         
-        return (riskScore / factors * factors).coerceIn(0.0, 1.0)
+        return (riskScore / factors).coerceIn(0.0, 1.0)
     }
 
     override suspend fun forecastBehaviorEscalation(evidence: List<Evidence>): Map<String, Any> {
