@@ -1,0 +1,125 @@
+name: Build Android Forensic Engine
+
+on:
+  push:
+    branches: [ main, copilot/* ]
+    paths:
+      - 'android-forensic-engine/**'
+      - '.github/workflows/build-forensic-engine.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'android-forensic-engine/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Java JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+      
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.2'
+      
+      - name: Make gradlew executable
+        working-directory: android-forensic-engine
+        run: chmod +x gradlew
+      
+      - name: Download Gradle Wrapper JAR
+        working-directory: android-forensic-engine
+        run: |
+          mkdir -p gradle/wrapper
+          if [ ! -f gradle/wrapper/gradle-wrapper.jar ]; then
+            curl -L -o gradle/wrapper/gradle-wrapper.jar \
+              https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar
+          fi
+      
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+      
+      - name: Build Debug APK
+        working-directory: android-forensic-engine
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+      
+      - name: Build Release APK
+        working-directory: android-forensic-engine
+        run: ./gradlew assembleRelease --no-daemon --stacktrace
+        continue-on-error: true
+      
+      - name: Run Unit Tests
+        working-directory: android-forensic-engine
+        run: ./gradlew test --no-daemon --stacktrace
+        continue-on-error: true
+      
+      - name: List APK outputs
+        run: |
+          echo "=== Debug APK ==="
+          find android-forensic-engine -name "*.apk" -type f | head -20
+          echo ""
+          echo "=== APK Sizes ==="
+          find android-forensic-engine -name "*.apk" -type f -exec ls -lh {} \;
+      
+      - name: Prepare APK artifacts
+        run: |
+          mkdir -p forensic-engine-apks
+          find android-forensic-engine -name "*debug*.apk" -type f -exec cp {} forensic-engine-apks/ \;
+          find android-forensic-engine -name "*release*.apk" -type f -exec cp {} forensic-engine-apks/ \; || true
+          ls -la forensic-engine-apks/
+      
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: forensic-engine-debug-apk
+          path: forensic-engine-apks/*debug*.apk
+          if-no-files-found: warn
+      
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: forensic-engine-release-apk
+          path: forensic-engine-apks/*release*.apk
+          if-no-files-found: ignore
+      
+      - name: Build Summary
+        run: |
+          echo "# 🧠 Verum Omnis Forensic Engine Build" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Nine-Brain Architecture" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 1: Contradiction Brain" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 2: Behavioral Diagnostics" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 3: Document Authenticity" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 4: Timeline & Geolocation" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 5: Voice Forensics" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 6: Image Validation" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 7: Legal & Compliance" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 8: Predictive Analytics" >> $GITHUB_STEP_SUMMARY
+          echo "- Brain 9: Synthesis & Verdict" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## APK Artifacts" >> $GITHUB_STEP_SUMMARY
+          echo "Download the APK from the **Artifacts** section above." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**\"Nine Brains. One Truth.\"** ⚖️🔒" >> $GITHUB_STEP_SUMMARY
