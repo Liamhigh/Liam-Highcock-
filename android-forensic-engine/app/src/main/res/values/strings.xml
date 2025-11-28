@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Verum Omnis Forensic</string>
+    <string name="forensic_analysis">Forensic Analysis</string>
+    <string name="forensic_report">Forensic Report</string>
+    
+    <!-- Main Activity -->
+    <string name="welcome_title">Verum Omnis</string>
+    <string name="welcome_subtitle">Nine-Brain Forensic Analysis Engine</string>
+    <string name="tagline">"Nine Brains. One Truth."</string>
+    <string name="import_evidence">Import Evidence</string>
+    <string name="start_analysis">Start Analysis</string>
+    <string name="view_reports">View Reports</string>
+    <string name="no_evidence">No evidence imported yet</string>
+    <string name="evidence_count">%d evidence items</string>
+    
+    <!-- Analysis Activity -->
+    <string name="analysis_in_progress">Analysis in Progress</string>
+    <string name="analyzing_brain">Analyzing with %s…</string>
+    <string name="analysis_complete">Analysis Complete</string>
+    <string name="view_report">View Report</string>
+    <string name="brain_progress">Brain %d of 9</string>
+    
+    <!-- Brain Names -->
+    <string name="brain_1">Contradiction Detection</string>
+    <string name="brain_2">Behavioral Diagnostics</string>
+    <string name="brain_3">Document Authenticity</string>
+    <string name="brain_4">Timeline &amp; Geolocation</string>
+    <string name="brain_5">Voice Forensics</string>
+    <string name="brain_6">Image Validation</string>
+    <string name="brain_7">Legal &amp; Compliance</string>
+    <string name="brain_8">Predictive Analytics</string>
+    <string name="brain_9">Synthesis &amp; Verdict</string>
+    
+    <!-- Report Activity -->
+    <string name="report_title">Forensic Report</string>
+    <string name="truth_stability_index">Truth Stability Index</string>
+    <string name="cross_brain_consensus">Cross-Brain Consensus</string>
+    <string name="verdict">Verdict</string>
+    <string name="findings">Findings</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="share_report">Share Report</string>
+    
+    <!-- Severity Labels -->
+    <string name="severity_critical">CRITICAL</string>
+    <string name="severity_high">HIGH</string>
+    <string name="severity_medium">MEDIUM</string>
+    <string name="severity_low">LOW</string>
+    <string name="severity_info">INFO</string>
+    
+    <!-- Constitutional Compliance -->
+    <string name="constitutional_compliance">Constitutional Compliance</string>
+    <string name="zero_loss_doctrine">Zero-Loss Evidence Doctrine</string>
+    <string name="triple_ai_consensus">Triple AI Consensus</string>
+    <string name="guardianship_model">Guardianship Model</string>
+    <string name="compliant">Compliant</string>
+    <string name="non_compliant">Non-Compliant</string>
+    
+    <!-- Errors -->
+    <string name="error_no_evidence">Please import evidence before starting analysis</string>
+    <string name="error_analysis_failed">Analysis failed. Please try again.</string>
+    <string name="error_file_not_found">File not found</string>
+    <string name="error_permission_denied">Permission denied</string>
+    
+    <!-- Permissions -->
+    <string name="permission_storage_title">Storage Permission Required</string>
+    <string name="permission_storage_message">Storage access is needed to import and analyze evidence files.</string>
+    <string name="permission_location_title">Location Permission</string>
+    <string name="permission_location_message">Location is used to geotag forensic reports for authenticity.</string>
+    
+    <!-- Actions -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
+    <string name="delete">Delete</string>
+    <string name="clear_all">Clear All</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+</resources>

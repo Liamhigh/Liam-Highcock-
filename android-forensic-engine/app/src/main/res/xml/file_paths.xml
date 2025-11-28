@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="forensic_reports"
+        path="reports/" />
+    <cache-path
+        name="temp_files"
+        path="temp/" />
+    <external-files-path
+        name="evidence"
+        path="evidence/" />
+    <external-files-path
+        name="exports"
+        path="exports/" />
+</paths>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Logo and Title Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="32dp">
+
+                <ImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/welcome_title"
+                    android:textAppearance="@style/TextAppearance.VerumOmnis.Headline1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/welcome_subtitle"
+                    android:textAppearance="@style/TextAppearance.VerumOmnis.Subtitle" />
+
+                <TextView
+                    android:id="@+id/taglineText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/tagline"
+                    android:textAppearance="@style/TextAppearance.VerumOmnis.Caption"
+                    android:fontFamily="serif"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <!-- Evidence Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/evidenceCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.VerumOmnis.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Evidence"
+                        android:textAppearance="@style/TextAppearance.VerumOmnis.Headline2"
+                        android:drawableStart="@android:drawable/ic_menu_gallery"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="@color/accent" />
+
+                    <TextView
+                        android:id="@+id/evidenceCountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/no_evidence"
+                        android:textAppearance="@style/TextAppearance.VerumOmnis.Body" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/evidenceRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:nestedScrollingEnabled="false"
+                        android:visibility="gone"
+                        tools:listitem="@layout/item_evidence" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/importButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/import_evidence"
+                        style="@style/Widget.VerumOmnis.Button.Secondary"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconGravity="textStart" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Nine Brains Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/brainsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.VerumOmnis.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nine-Brain Architecture"
+                        android:textAppearance="@style/TextAppearance.VerumOmnis.Headline2"
+                        android:drawableStart="@android:drawable/ic_menu_compass"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="@color/accent" />
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:columnCount="3"
+                        android:rowCount="3"
+                        android:useDefaultMargins="true">
+
+                        <TextView android:text="1. Contradiction" android:textColor="@color/brain_1" android:textSize="11sp" />
+                        <TextView android:text="2. Behavioral" android:textColor="@color/brain_2" android:textSize="11sp" />
+                        <TextView android:text="3. Document" android:textColor="@color/brain_3" android:textSize="11sp" />
+                        <TextView android:text="4. Timeline" android:textColor="@color/brain_4" android:textSize="11sp" />
+                        <TextView android:text="5. Voice" android:textColor="@color/brain_5" android:textSize="11sp" />
+                        <TextView android:text="6. Image" android:textColor="@color/brain_6" android:textSize="11sp" />
+                        <TextView android:text="7. Legal" android:textColor="@color/brain_7" android:textSize="11sp" />
+                        <TextView android:text="8. Predictive" android:textColor="@color/brain_8" android:textSize="11sp" />
+                        <TextView android:text="9. Synthesis" android:textColor="@color/brain_9" android:textSize="11sp" />
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action Buttons -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startAnalysisButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/start_analysis"
+                android:enabled="false"
+                style="@style/Widget.VerumOmnis.Button.Primary"
+                app:icon="@android:drawable/ic_menu_search"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/viewReportsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/view_reports"
+                style="@style/Widget.VerumOmnis.Button.Secondary"
+                app:icon="@android:drawable/ic_menu_agenda"
+                app:iconGravity="textStart" />
+
+            <!-- Footer -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:text="100% Offline • Constitutional Compliance\nSHA-512 Sealed • Court-Admissible"
+                android:textAppearance="@style/TextAppearance.VerumOmnis.Caption"
+                android:lineSpacingMultiplier="1.4" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
