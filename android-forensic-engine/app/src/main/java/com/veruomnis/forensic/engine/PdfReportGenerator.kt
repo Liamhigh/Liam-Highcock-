@@ -16,6 +16,7 @@ import com.itextpdf.layout.properties.HorizontalAlignment
 import com.itextpdf.layout.properties.TextAlignment
 import com.itextpdf.layout.properties.UnitValue
 import com.itextpdf.io.image.ImageDataFactory
+import com.itextpdf.kernel.pdf.canvas.PdfCanvas
 import com.veruomnis.forensic.models.*
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -571,7 +572,7 @@ class PdfReportGenerator(private val context: Context) {
             val pageSize = page.pageSize
 
             // Create canvas for footer
-            val canvas = com.itextpdf.kernel.pdf.canvas.PdfCanvas(page)
+            val canvas = PdfCanvas(page)
             
             // Draw footer line
             canvas.setStrokeColor(primaryBlue)
