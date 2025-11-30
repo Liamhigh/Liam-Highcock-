@@ -218,6 +218,7 @@ class AnalysisActivity : AppCompatActivity() {
                 
                 withContext(Dispatchers.Main) {
                     analysisReport = report
+                    setLastReport(report) // Store for ReportActivity
                     showAnalysisComplete(report)
                 }
                 

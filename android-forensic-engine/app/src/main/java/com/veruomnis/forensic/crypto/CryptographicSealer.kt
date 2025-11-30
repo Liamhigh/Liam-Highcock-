@@ -33,17 +33,26 @@ class CryptographicSealer {
      * Gate 1: Seal evidence on input
      * 
      * Creates an initial seal for evidence when it enters the system.
+     * Uses delimiters to prevent collision attacks.
      */
     fun sealEvidence(evidence: Evidence): String {
+        val delimiter = "|"
         val dataToHash = buildString {
             append(evidence.id)
+            append(delimiter)
             append(evidence.fileName)
+            append(delimiter)
             append(evidence.fileSize)
+            append(delimiter)
             append(evidence.mimeType)
+            append(delimiter)
             append(evidence.dateAdded.time)
-            evidence.metadata.forEach { (k, v) -> 
+            append(delimiter)
+            evidence.metadata.entries.sortedBy { it.key }.forEach { (k, v) -> 
                 append(k)
+                append("=")
                 append(v.toString())
+                append(delimiter)
             }
         }
         return calculateSHA512(dataToHash)
