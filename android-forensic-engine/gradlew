@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Gradle Wrapper for Verum Omnis Android Forensic Engine
+
+# Determine the project directory
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Check for JAVA_HOME
+if [ -z "$JAVA_HOME" ]; then
+    echo "JAVA_HOME is not set. Please set it to your JDK 17+ installation."
+    exit 1
+fi
+
+# Gradle version
+GRADLE_VERSION="8.4"
+
+# Default Gradle user home
+GRADLE_USER_HOME="${GRADLE_USER_HOME:-$HOME/.gradle}"
+
+# Download Gradle if not present
+GRADLE_DIR="$GRADLE_USER_HOME/wrapper/dists/gradle-$GRADLE_VERSION-bin"
+if [ ! -d "$GRADLE_DIR" ]; then
+    echo "Downloading Gradle $GRADLE_VERSION..."
+    mkdir -p "$GRADLE_DIR"
+    curl -L "https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip" -o "$GRADLE_DIR/gradle.zip"
+    unzip -q "$GRADLE_DIR/gradle.zip" -d "$GRADLE_DIR"
+fi
+
+# Find Gradle executable
+GRADLE_BIN=$(find "$GRADLE_DIR" -name gradle -type f | head -1)
+
+if [ -z "$GRADLE_BIN" ]; then
+    echo "Could not find Gradle executable. Please download Gradle $GRADLE_VERSION manually."
+    exit 1
+fi
+
+# Execute Gradle with all arguments
+exec "$GRADLE_BIN" "$@"

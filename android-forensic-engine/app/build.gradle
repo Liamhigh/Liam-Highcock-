@@ -82,6 +82,12 @@ dependencies {
     implementation 'androidx.room:room-ktx:2.6.1'
     kapt 'androidx.room:room-compiler:2.6.1'
     
+    // Location Services for GPS sealing
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    
+    // Activity Result API
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+    
     // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

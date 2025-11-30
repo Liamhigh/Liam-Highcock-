@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Verum Omnis Dark Theme Colors -->
+    <color name="primary">#1E3A5F</color>
+    <color name="primary_variant">#0D2137</color>
+    <color name="secondary">#4A90A4</color>
+    <color name="secondary_variant">#2D6B7F</color>
+    
+    <!-- Background Colors (Dark Theme) -->
+    <color name="background">#0A1929</color>
+    <color name="surface">#132F4C</color>
+    <color name="surface_variant">#1A3A5C</color>
+    
+    <!-- Text Colors -->
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_background">#E8F4FD</color>
+    <color name="on_surface">#E8F4FD</color>
+    <color name="text_secondary">#B4C6D9</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_gold">#D4AF37</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_red">#F44336</color>
+    <color name="accent_orange">#FF9800</color>
+    
+    <!-- Severity Colors -->
+    <color name="severity_critical">#D32F2F</color>
+    <color name="severity_high">#F44336</color>
+    <color name="severity_medium">#FF9800</color>
+    <color name="severity_low">#FFC107</color>
+    <color name="severity_info">#2196F3</color>
+    
+    <!-- Brain Status Colors -->
+    <color name="brain_active">#4CAF50</color>
+    <color name="brain_processing">#FF9800</color>
+    <color name="brain_complete">#2196F3</color>
+    <color name="brain_idle">#757575</color>
+    
+    <!-- Constitutional Colors -->
+    <color name="constitutional_gold">#D4AF37</color>
+    <color name="seal_verified">#4CAF50</color>
+    <color name="seal_invalid">#F44336</color>
+</resources>

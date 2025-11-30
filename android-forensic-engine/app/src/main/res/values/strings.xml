@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Verum Omnis</string>
+    <string name="forensic_analysis">Forensic Analysis</string>
+    <string name="forensic_report">Forensic Report</string>
+    
+    <!-- Main Activity -->
+    <string name="import_evidence">Import Evidence</string>
+    <string name="start_analysis">Start Analysis</string>
+    <string name="view_reports">View Reports</string>
+    <string name="no_evidence">No evidence loaded. Tap the button below to import files.</string>
+    <string name="evidence_count">%d evidence files loaded</string>
+    <string name="nine_brains_one_truth">Nine Brains. One Truth.</string>
+    <string name="constitutional_forensics">Constitutional Forensics for Everyone</string>
+    
+    <!-- Analysis Activity -->
+    <string name="analyzing">Analyzing…</string>
+    <string name="analysis_complete">Analysis Complete</string>
+    <string name="brain_progress">Processing %s (%d/%d)</string>
+    <string name="generating_report">Generating sealed report…</string>
+    <string name="truth_stability_index">Truth Stability Index: %d%%</string>
+    
+    <!-- Report Activity -->
+    <string name="report_sealed">Report Cryptographically Sealed</string>
+    <string name="share_report">Share Report</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="verify_qr">Verify QR Code</string>
+    
+    <!-- Brain Names -->
+    <string name="brain_1">Contradiction Brain</string>
+    <string name="brain_2">Behavioral Diagnostics Brain</string>
+    <string name="brain_3">Document Authenticity Brain</string>
+    <string name="brain_4">Timeline Geolocation Brain</string>
+    <string name="brain_5">Voice Forensics Brain</string>
+    <string name="brain_6">Image Validation Brain</string>
+    <string name="brain_7">Legal Compliance Brain</string>
+    <string name="brain_8">Predictive Analytics Brain</string>
+    <string name="brain_9">Synthesis Verdict Brain</string>
+    
+    <!-- Permissions -->
+    <string name="permission_required">Permission Required</string>
+    <string name="storage_permission_rationale">Storage access is required to import evidence files for forensic analysis.</string>
+    <string name="location_permission_rationale">Location is required to seal reports with GPS coordinates.</string>
+    
+    <!-- Errors -->
+    <string name="error_loading_file">Error loading file</string>
+    <string name="error_analysis_failed">Analysis failed. Please try again.</string>
+    <string name="error_no_evidence">Please import evidence before starting analysis.</string>
+    
+    <!-- Constitutional Compliance -->
+    <string name="zero_loss_doctrine">Zero-Loss Evidence Doctrine Enforced</string>
+    <string name="triple_verification">Triple-AI Consensus Verified</string>
+    <string name="seal_rule">Article X: The Verum Seal Rule Applied</string>
+</resources>

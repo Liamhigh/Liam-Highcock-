@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.AnalysisActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+            app:title="@string/forensic_analysis"
+            app:titleTextColor="@color/on_primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Overall Progress -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/overallProgress"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:indeterminate="false"
+            android:progress="0"
+            app:indicatorColor="@color/constitutional_gold"
+            app:indicatorSize="200dp"
+            app:trackColor="@color/surface"
+            app:trackThickness="8dp" />
+
+        <TextView
+            android:id="@+id/progressPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-120dp"
+            android:text="0%"
+            android:textColor="@color/on_surface"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentBrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/analyzing"
+            android:textColor="@color/constitutional_gold"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/brainProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Processing Brain 1/9"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <!-- Brain Status List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/brainStatusRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" />
+
+        <!-- Truth Stability Index -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/tsiCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Truth Stability Index"
+                    android:textColor="@color/on_surface"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tsiValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="--"
+                    android:textColor="@color/constitutional_gold"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewReportButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:enabled="false"
+            android:text="View Sealed Report"
+            android:visibility="gone"
+            app:backgroundTint="@color/accent_green" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
