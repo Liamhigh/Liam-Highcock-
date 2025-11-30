@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- No cloud backup for forensic data - security requirement -->
+    </cloud-backup>
+    <device-transfer>
+        <!-- No device transfer for forensic data - security requirement -->
+    </device-transfer>
+</data-extraction-rules>
