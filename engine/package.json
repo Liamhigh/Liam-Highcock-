@@ -1,0 +1,21 @@
+{
+  "name": "verum-omnis-contradiction-engine",
+  "version": "1.0.0",
+  "description": "Contradiction Engine for Verum Omnis - Zero-false-negative fraud detection through text analysis",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js",
+    "analyze": "node cli.js"
+  },
+  "keywords": [
+    "legal-ai",
+    "fraud-detection",
+    "contradiction-engine",
+    "verum-omnis",
+    "text-analysis"
+  ],
+  "author": "Verum Omnis",
+  "license": "MIT"
+}
