@@ -2,7 +2,7 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ main, copilot/build-android-project-apk, copilot/check-project-completion-status ]
+    branches: [ main, copilot/build-android-project-apk, copilot/check-project-completion-status, copilot/check-build-status ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -28,7 +28,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
       
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
