@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Verum Omnis Branding -->
+    <color name="primary_blue">#1A237E</color>
+    <color name="primary_blue_dark">#0D1654</color>
+    <color name="primary_blue_light">#3949AB</color>
+    <color name="gold">#FFD700</color>
+    <color name="gold_dark">#C7A600</color>
+    
+    <!-- Status Colors -->
+    <color name="success_green">#388E3C</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="alert_red">#D32F2F</color>
+    <color name="info_blue">#2196F3</color>
+    
+    <!-- Neutral Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#BDBDBD</color>
+    
+    <!-- Material Theme Colors -->
+    <color name="colorPrimary">@color/primary_blue</color>
+    <color name="colorPrimaryVariant">@color/primary_blue_dark</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="colorSecondary">@color/gold</color>
+    <color name="colorSecondaryVariant">@color/gold_dark</color>
+    <color name="colorOnSecondary">@color/black</color>
+    <color name="colorError">@color/alert_red</color>
+    <color name="colorOnError">@color/white</color>
+    <color name="colorSurface">@color/surface</color>
+    <color name="colorOnSurface">@color/text_primary</color>
+    <color name="colorBackground">@color/background_light</color>
+    <color name="colorOnBackground">@color/text_primary</color>
+</resources>
